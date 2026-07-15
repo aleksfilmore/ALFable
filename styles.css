@@ -133,6 +133,18 @@ h1 em, h2 em { color: var(--olive); font-weight: 600; }
 .contact-inner > p:not(.eyebrow) { font-size: 18px; line-height: 1.5; margin-bottom: 32px; max-width: 500px; }
 .site-footer { align-items: center; display: flex; justify-content: space-between; min-height: 115px; }
 .site-footer p { color: #6a6a60; font-family: var(--mono); font-size: 10px; letter-spacing: .05em; text-transform: uppercase; }
+.footer-links { display: flex; gap: 14px; }
+.footer-links a, .footer-links button { background: transparent; border: 0; color: #6a6a60; cursor: pointer; font-family: var(--mono); font-size: 10px; letter-spacing: .04em; padding: 0; text-transform: uppercase; }
+.footer-links a:hover, .footer-links button:hover { color: var(--olive); }
+.cookie-banner { align-items: end; background: var(--black); bottom: 18px; box-shadow: 0 16px 45px rgba(0,0,0,.28); color: var(--paper); display: none; gap: 32px; justify-content: space-between; left: 18px; max-width: 620px; padding: 22px; position: fixed; right: 18px; z-index: 20; }
+.cookie-banner.is-visible { display: flex; }
+.cookie-banner .eyebrow { color: var(--pear); margin-bottom: 9px; }
+.cookie-banner p:not(.eyebrow) { color: #d0d0c4; font-size: 12px; line-height: 1.5; margin: 0; max-width: 360px; }
+.cookie-banner p a { border-bottom: 1px solid var(--pear); color: var(--paper); }
+.cookie-actions { display: flex; flex-shrink: 0; gap: 8px; }
+.cookie-actions button { cursor: pointer; font-family: var(--sans); font-size: 11px; font-weight: 700; padding: 11px 12px; }
+.cookie-essential { background: transparent; border: 1px solid #696960; color: var(--paper); }
+.cookie-accept { background: var(--pear); border: 1px solid var(--pear); color: var(--black); }
 
 .reveal { animation: enter .75s both cubic-bezier(.2,.75,.2,1); }
 .delay-1 { animation-delay: .13s; }.delay-2 { animation-delay: .24s; }
@@ -141,6 +153,6 @@ h1 em, h2 em { color: var(--olive); font-weight: 600; }
 @media (max-width: 800px) {
   .wrap { width: min(100% - 36px, 600px); }.site-header { grid-template-columns: 1fr auto; min-height: 76px; }.site-header nav { display: none; }.header-cta { font-size: 11px; }
   .hero { display: block; min-height: auto; padding: 64px 0 80px; }.hero-copy { padding-bottom: 48px; }.hero h1 { font-size: clamp(58px, 17vw, 92px); }.portrait-wrap { min-height: 455px; }.hero-foot { bottom: 25px; left: 18px; width: calc(100% - 36px); }.hero-foot span:first-child { display: none; }
-  .statement-grid, .services, .work-heading, .about, .testimonials-heading { grid-template-columns: 1fr; }.statement-grid { gap: 17px; padding: 45px 0; }.services { gap: 44px; padding: 82px 0; }.work-section { padding: 78px 0; }.work-heading { gap: 13px; margin-bottom: 35px; }.work-card { grid-column: span 12; min-height: 330px; }.more-card { min-height: 220px; }.testimonials { padding: 80px 0; }.testimonials-heading { gap: 16px; margin-bottom: 34px; }.testimonials-heading > p:last-child { margin: 0; }.testimonial-grid { grid-template-columns: 1fr; }.testimonial, .featured-quote { min-height: 280px; }.about { gap: 36px; padding: 88px 0; }.about-aside span { margin-top: 24px; }.credentials { grid-template-columns: 1fr; }.contact-inner { padding: 78px 0; }.site-footer { align-items: flex-start; flex-direction: column; gap: 5px; padding: 30px 0; }.site-footer p { margin: 0; }
+  .statement-grid, .services, .work-heading, .about, .testimonials-heading { grid-template-columns: 1fr; }.statement-grid { gap: 17px; padding: 45px 0; }.services { gap: 44px; padding: 82px 0; }.work-section { padding: 78px 0; }.work-heading { gap: 13px; margin-bottom: 35px; }.work-card { grid-column: span 12; min-height: 330px; }.more-card { min-height: 220px; }.testimonials { padding: 80px 0; }.testimonials-heading { gap: 16px; margin-bottom: 34px; }.testimonials-heading > p:last-child { margin: 0; }.testimonial-grid { grid-template-columns: 1fr; }.testimonial, .featured-quote { min-height: 280px; }.about { gap: 36px; padding: 88px 0; }.about-aside span { margin-top: 24px; }.credentials { grid-template-columns: 1fr; }.contact-inner { padding: 78px 0; }.site-footer { align-items: flex-start; flex-direction: column; gap: 12px; padding: 30px 0; }.site-footer p { margin: 0; }.cookie-banner { align-items: flex-start; flex-direction: column; gap: 16px; }.cookie-actions { width: 100%; }.cookie-actions button { flex: 1; }
 }
 @media (max-width: 430px) { .hero-actions { align-items: flex-start; flex-direction: column; gap: 20px; }.service-item { gap: 12px; grid-template-columns: 35px 1fr; }.service-arrow { display: none; }.service-item h3 { font-size: 25px; }.work-card { min-height: 310px; }.card-top { gap: 10px; }.card-top span:last-child { text-align: right; }.header-cta { font-size: 10px; } }
