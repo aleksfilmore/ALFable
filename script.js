@@ -52,6 +52,22 @@ document.querySelector("[data-cookie-settings]")?.addEventListener("click", () =
    go live; until then it falls back to the email address shown in the form. */
 const contactForm = document.querySelector("[data-contact-form]");
 const formStatus = contactForm?.querySelector("[data-form-status]");
+const isRomanian = document.documentElement.lang.startsWith("ro");
+const formCopy = isRomanian
+  ? {
+      unconnected: "Formularul de contact nu este conectat încă. Trimite-mi un email la alex@alfable.com și îți răspund personal.",
+      sending: "Se trimite…",
+      success: "Mulțumesc. Mesajul tău a fost trimis și revin în curând.",
+      error: "Ceva nu a funcționat. Trimite-mi un email la alex@alfable.com.",
+      network: "Eroare de rețea. Trimite-mi un email la alex@alfable.com.",
+    }
+  : {
+      unconnected: "Contact form isn’t connected yet. Email alex@alfable.com and I’ll reply personally.",
+      sending: "Sending…",
+      success: "Thanks. Your message is on its way, and I’ll be in touch soon.",
+      error: "Something went wrong. Please email alex@alfable.com instead.",
+      network: "Network error. Please email alex@alfable.com instead.",
+    };
 
 function setStatus(message) {
   if (formStatus) formStatus.textContent = message;
@@ -61,12 +77,12 @@ contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
   const action = contactForm.getAttribute("action") || "";
   if (action.includes("YOUR_FORM_ID")) {
-    setStatus("Contact form isn’t connected yet. Email alex@alfable.com and I’ll reply personally.");
+    setStatus(formCopy.unconnected);
     return;
   }
   const submitButton = contactForm.querySelector("button[type=submit]");
   if (submitButton) submitButton.disabled = true;
-  setStatus("Sending…");
+  setStatus(formCopy.sending);
   try {
     const response = await fetch(action, {
       method: "POST",
@@ -75,12 +91,12 @@ contactForm?.addEventListener("submit", async (event) => {
     });
     if (response.ok) {
       contactForm.reset();
-      setStatus("Thanks. Your message is on its way, and I’ll be in touch soon.");
+      setStatus(formCopy.success);
     } else {
-      setStatus("Something went wrong. Please email alex@alfable.com instead.");
+      setStatus(formCopy.error);
     }
   } catch {
-    setStatus("Network error. Please email alex@alfable.com instead.");
+    setStatus(formCopy.network);
   } finally {
     if (submitButton) submitButton.disabled = false;
   }

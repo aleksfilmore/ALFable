@@ -1,27 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.alfable.com/</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alfable.com/" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.alfable.com/ro/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alfable.com/" />
+    <lastmod>2026-07-15</lastmod><changefreq>monthly</changefreq><priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.alfable.com/ro/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alfable.com/" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.alfable.com/ro/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.alfable.com/" />
+    <lastmod>2026-07-15</lastmod><changefreq>monthly</changefreq><priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.alfable.com/privacy.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alfable.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.alfable.com/ro/privacy.html" />
+    <lastmod>2026-07-15</lastmod><changefreq>yearly</changefreq><priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.alfable.com/ro/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alfable.com/privacy.html" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.alfable.com/ro/privacy.html" />
+    <lastmod>2026-07-15</lastmod><changefreq>yearly</changefreq><priority>0.2</priority>
   </url>
   <url>
     <loc>https://www.alfable.com/cookies.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alfable.com/cookies.html" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.alfable.com/ro/cookies.html" />
+    <lastmod>2026-07-15</lastmod><changefreq>yearly</changefreq><priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.alfable.com/ro/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alfable.com/cookies.html" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.alfable.com/ro/cookies.html" />
+    <lastmod>2026-07-15</lastmod><changefreq>yearly</changefreq><priority>0.2</priority>
   </url>
   <url>
     <loc>https://www.alfable.com/terms.html</loc>
-    <lastmod>2026-07-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alfable.com/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.alfable.com/ro/terms.html" />
+    <lastmod>2026-07-15</lastmod><changefreq>yearly</changefreq><priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.alfable.com/ro/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.alfable.com/terms.html" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.alfable.com/ro/terms.html" />
+    <lastmod>2026-07-15</lastmod><changefreq>yearly</changefreq><priority>0.2</priority>
   </url>
 </urlset>

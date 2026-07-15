@@ -57,8 +57,11 @@ a { color: inherit; text-decoration: none; }
 .site-header nav a, .header-cta { font-size: 12px; font-weight: 600; }
 .site-header nav a { color: #62584d; transition: color .2s ease; }
 .site-header nav a:hover { color: var(--olive); }
-.header-cta { justify-self: end; border-bottom: 1px solid var(--ink); padding-bottom: 5px; }
+.header-actions { align-items: center; display: flex; gap: 17px; justify-self: end; }
+.header-cta { border-bottom: 1px solid var(--ink); padding-bottom: 5px; }
 .header-cta span { color: var(--olive); font-size: 15px; }
+.language-link { color: var(--slate); font-family: var(--mono); font-size: 10px; letter-spacing: .08em; padding: 5px 0; text-transform: uppercase; }
+.language-link:hover { color: var(--olive); }
 
 .hero { align-items: end; display: grid; grid-template-columns: 1.14fr .86fr; min-height: min(790px, calc(100svh - 88px)); padding: 70px 0 42px; position: relative; }
 .hero-copy { max-width: 700px; padding-bottom: 68px; }
