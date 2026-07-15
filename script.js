@@ -12,17 +12,7 @@ function loadAnalytics() {
   window[`ga-disable-${measurementId}`] = false;
   window.dataLayer = window.dataLayer || [];
   window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
-  window.gtag("consent", "default", { analytics_storage: "granted" });
-
-  if (!document.querySelector("script[data-google-analytics]")) {
-    const analytics = document.createElement("script");
-    analytics.async = true;
-    analytics.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-    analytics.dataset.googleAnalytics = "true";
-    document.head.appendChild(analytics);
-    window.gtag("js", new Date());
-    window.gtag("config", measurementId);
-  }
+  window.gtag("consent", "update", { analytics_storage: "granted" });
 }
 
 function disableAnalytics() {
