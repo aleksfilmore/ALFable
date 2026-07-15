@@ -1,18 +1,12 @@
 document.getElementById("year").textContent = new Date().getFullYear();
 
+/* Fonts are self-hosted (see @font-face in styles.css), so they load for every
+   visitor with no third-party request and no consent gate. Only analytics is
+   consent-gated below. */
+
 const consentKey = "alfable-cookie-preferences";
-const fontsHref = "https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap";
 const measurementId = "G-M775PK8CJ2";
 const banner = document.querySelector("[data-cookie-banner]");
-
-function loadOptionalFonts() {
-  if (document.querySelector("link[data-optional-fonts]")) return;
-  const fonts = document.createElement("link");
-  fonts.rel = "stylesheet";
-  fonts.href = fontsHref;
-  fonts.dataset.optionalFonts = "true";
-  document.head.appendChild(fonts);
-}
 
 function loadAnalytics() {
   window[`ga-disable-${measurementId}`] = false;
@@ -45,19 +39,12 @@ function setConsent(value) {
   localStorage.setItem(consentKey, value);
   banner?.classList.remove("is-visible");
   banner?.setAttribute("aria-hidden", "true");
-  if (value === "optional") {
-    loadOptionalFonts();
-    loadAnalytics();
-  } else {
-    disableAnalytics();
-  }
+  if (value === "optional") loadAnalytics();
+  else disableAnalytics();
 }
 
 const storedConsent = localStorage.getItem(consentKey);
-if (storedConsent === "optional") {
-  loadOptionalFonts();
-  loadAnalytics();
-}
+if (storedConsent === "optional") loadAnalytics();
 if (!storedConsent) {
   banner?.classList.add("is-visible");
   banner?.setAttribute("aria-hidden", "false");
@@ -68,4 +55,43 @@ document.querySelector("[data-cookie-accept]")?.addEventListener("click", () => 
 document.querySelector("[data-cookie-settings]")?.addEventListener("click", () => {
   banner?.classList.add("is-visible");
   banner?.setAttribute("aria-hidden", "false");
+});
+
+/* Contact form: progressive enhancement over the native POST.
+   Set the action to your Formspree endpoint (https://formspree.io/f/XXXX) to
+   go live; until then it falls back to the email address shown in the form. */
+const contactForm = document.querySelector("[data-contact-form]");
+const formStatus = contactForm?.querySelector("[data-form-status]");
+
+function setStatus(message) {
+  if (formStatus) formStatus.textContent = message;
+}
+
+contactForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const action = contactForm.getAttribute("action") || "";
+  if (action.includes("YOUR_FORM_ID")) {
+    setStatus("Contact form isn’t connected yet. Email alex@alfable.com and I’ll reply personally.");
+    return;
+  }
+  const submitButton = contactForm.querySelector("button[type=submit]");
+  if (submitButton) submitButton.disabled = true;
+  setStatus("Sending…");
+  try {
+    const response = await fetch(action, {
+      method: "POST",
+      body: new FormData(contactForm),
+      headers: { Accept: "application/json" },
+    });
+    if (response.ok) {
+      contactForm.reset();
+      setStatus("Thanks. Your message is on its way, and I’ll be in touch soon.");
+    } else {
+      setStatus("Something went wrong. Please email alex@alfable.com instead.");
+    }
+  } catch {
+    setStatus("Network error. Please email alex@alfable.com instead.");
+  } finally {
+    if (submitButton) submitButton.disabled = false;
+  }
 });
