@@ -176,6 +176,7 @@ h1 em, h2 em { color: var(--olive); font-weight: 600; }
 .contact-form input::placeholder, .contact-form textarea::placeholder { color: #9a9483; }
 .contact-form input:focus-visible, .contact-form textarea:focus-visible { outline: 2px solid var(--ink); outline-offset: 1px; }
 .contact-form textarea { min-height: 130px; resize: vertical; }
+.form-trap { clip: rect(0 0 0 0); clip-path: inset(50%); height: 1px; margin: -1px; overflow: hidden; position: absolute; white-space: nowrap; width: 1px; }
 .contact-form .form-submit { border: 0; cursor: pointer; justify-self: start; margin-top: 4px; }
 .contact-form .form-foot { align-items: baseline; display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 3px; }
 .form-note { color: #40480a; font-family: var(--mono); font-size: 10px; letter-spacing: .04em; margin: 0; text-transform: uppercase; }

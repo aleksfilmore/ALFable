@@ -47,22 +47,18 @@ document.querySelector("[data-cookie-settings]")?.addEventListener("click", () =
   banner?.setAttribute("aria-hidden", "false");
 });
 
-/* Contact form: progressive enhancement over the native POST.
-   Set the action to your Formspree endpoint (https://formspree.io/f/XXXX) to
-   go live; until then it falls back to the email address shown in the form. */
+/* Contact form: progressive enhancement over the native POST to /api/contact. */
 const contactForm = document.querySelector("[data-contact-form]");
 const formStatus = contactForm?.querySelector("[data-form-status]");
 const isRomanian = document.documentElement.lang.startsWith("ro");
 const formCopy = isRomanian
   ? {
-      unconnected: "Formularul de contact nu este conectat încă. Trimite-mi un email la alex@alfable.com și îți răspund personal.",
       sending: "Se trimite…",
       success: "Mulțumesc. Mesajul tău a fost trimis și revin în curând.",
       error: "Ceva nu a funcționat. Trimite-mi un email la alex@alfable.com.",
       network: "Eroare de rețea. Trimite-mi un email la alex@alfable.com.",
     }
   : {
-      unconnected: "Contact form isn’t connected yet. Email alex@alfable.com and I’ll reply personally.",
       sending: "Sending…",
       success: "Thanks. Your message is on its way, and I’ll be in touch soon.",
       error: "Something went wrong. Please email alex@alfable.com instead.",
@@ -76,18 +72,14 @@ function setStatus(message) {
 contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
   const action = contactForm.getAttribute("action") || "";
-  if (action.includes("YOUR_FORM_ID")) {
-    setStatus(formCopy.unconnected);
-    return;
-  }
   const submitButton = contactForm.querySelector("button[type=submit]");
   if (submitButton) submitButton.disabled = true;
   setStatus(formCopy.sending);
   try {
     const response = await fetch(action, {
       method: "POST",
-      body: new FormData(contactForm),
-      headers: { Accept: "application/json" },
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(Object.fromEntries(new FormData(contactForm).entries())),
     });
     if (response.ok) {
       contactForm.reset();
