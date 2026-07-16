@@ -1,0 +1,10 @@
+# Source assets and internal files that must not be deployed publicly.
+ALFable-Brand-Book.pdf
+Alexandru Filip.jpeg
+Logo 1.png
+Logo 2.png
+fonts/README.md
+.claude
+.agents
+.codex
+.gitignore

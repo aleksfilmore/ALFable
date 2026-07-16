@@ -19,9 +19,15 @@ function disableAnalytics() {
   window[`ga-disable-${measurementId}`] = true;
   if (window.gtag) window.gtag("consent", "update", { analytics_storage: "denied" });
   const expiry = "expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+  // GA sets _ga cookies on the registrable domain, so expire both the
+  // host-only and domain-scoped variants or the deletion never matches.
+  const domain = location.hostname.replace(/^www\./, "");
   document.cookie.split(";").forEach((cookie) => {
     const name = cookie.split("=")[0].trim();
-    if (name.startsWith("_ga")) document.cookie = `${name}=; ${expiry}`;
+    if (name.startsWith("_ga")) {
+      document.cookie = `${name}=; ${expiry}`;
+      document.cookie = `${name}=; domain=.${domain}; ${expiry}`;
+    }
   });
 }
 
@@ -79,7 +85,7 @@ contactForm?.addEventListener("submit", async (event) => {
     const response = await fetch(action, {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(Object.fromEntries(new FormData(contactForm).entries())),
+      body: JSON.stringify({ ...Object.fromEntries(new FormData(contactForm).entries()), locale: isRomanian ? "ro" : "en" }),
     });
     if (response.ok) {
       contactForm.reset();
