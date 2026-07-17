@@ -1,0 +1,90 @@
+[
+  {
+    "id": "VID001",
+    "name": "Architectural_light_reshaping_co…_1080p_202607171026 (1).mp4",
+    "path": "C:\\Dev\\ALFable\\VISUALS\\Architectural_light_reshaping_co…_1080p_202607171026 (1).mp4",
+    "duration": 8.0,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "fps": "24/1",
+    "sha256": "cbc5ce5615b9222c2bd12395212b785fd54f207906b3c2119fff2700bb8e042b"
+  },
+  {
+    "id": "VID002",
+    "name": "Architectural_light_reshaping_co…_1080p_202607171026.mp4",
+    "path": "C:\\Dev\\ALFable\\VISUALS\\Architectural_light_reshaping_co…_1080p_202607171026.mp4",
+    "duration": 8.0,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "fps": "24/1",
+    "sha256": "cc8be3d28f5829757dd3d25e09800baa5a651a9b3007f29154a46770b178489a"
+  },
+  {
+    "id": "VID003",
+    "name": "Editorial_monochrome_loop_1080p_202607171022 (1).mp4",
+    "path": "C:\\Dev\\ALFable\\VISUALS\\Editorial_monochrome_loop_1080p_202607171022 (1).mp4",
+    "duration": 8.0,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "fps": "24/1",
+    "sha256": "e74560c4ffdc32a74c20a128ba5031a1c0a8a1eec16c89dfa0df012ae1278b3a"
+  },
+  {
+    "id": "VID004",
+    "name": "Editorial_monochrome_loop_1080p_202607171022.mp4",
+    "path": "C:\\Dev\\ALFable\\VISUALS\\Editorial_monochrome_loop_1080p_202607171022.mp4",
+    "duration": 8.0,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "fps": "24/1",
+    "sha256": "68c2610570bcb46f5162cf8b1e83039a51371f24c853c0e9ca53d527203461e9"
+  },
+  {
+    "id": "VID005",
+    "name": "Editorial_monochrome_loop_1080p_202607171023 (1).mp4",
+    "path": "C:\\Dev\\ALFable\\VISUALS\\Editorial_monochrome_loop_1080p_202607171023 (1).mp4",
+    "duration": 8.0,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "fps": "24/1",
+    "sha256": "6f45f723cbaa3220e9948d6337ba57edba34124a92659d6decd4531776554173"
+  },
+  {
+    "id": "VID006",
+    "name": "Editorial_monochrome_loop_1080p_202607171023.mp4",
+    "path": "C:\\Dev\\ALFable\\VISUALS\\Editorial_monochrome_loop_1080p_202607171023.mp4",
+    "duration": 8.0,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "fps": "24/1",
+    "sha256": "7504167233d1414bbe10ef253b708d04f6391095ac9add431c4908bf8d3d5925"
+  },
+  {
+    "id": "VID007",
+    "name": "Editorial_monochrome_loop_1080p_202607171024.mp4",
+    "path": "C:\\Dev\\ALFable\\VISUALS\\Editorial_monochrome_loop_1080p_202607171024.mp4",
+    "duration": 8.0,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "fps": "24/1",
+    "sha256": "b6c8672e07b096657bcac51e3eb6f0ca436fc04680caa011d375c959fac80445"
+  },
+  {
+    "id": "VID008",
+    "name": "Editorial_monochrome_loop_1080p_202607171025.mp4",
+    "path": "C:\\Dev\\ALFable\\VISUALS\\Editorial_monochrome_loop_1080p_202607171025.mp4",
+    "duration": 8.0,
+    "width": 1920,
+    "height": 1080,
+    "codec": "h264",
+    "fps": "24/1",
+    "sha256": "b7d44420e99bc8407a8cc31f7877c34a1db757f3084e06e45d93aab7db21cc71"
+  }
+]
