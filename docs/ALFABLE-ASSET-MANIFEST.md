@@ -3,7 +3,7 @@
 **Status:** Initial website visual family selected  
 **Date:** 17 July 2026  
 **Production folder:** `assets/repositioning/selected/`  
-**Pending media folder:** `assets/repositioning/pending/`
+**Reference media folder:** `assets/repositioning/pending/`
 **Rights confirmation:** Alexandru confirms commercial-use rights for the Gemini-generated visuals. No public generator attribution or production-detail disclosure is required.
 
 ## Implementation instruction
@@ -12,7 +12,7 @@ Use only the files in `assets/repositioning/selected/` for the first website imp
 
 The selected family contains four editorial stills plus the existing real portrait of Alexandru. A fifth editorial still was intentionally not selected because it would add repetition without introducing a necessary visual role.
 
-The video in `assets/repositioning/pending/` is a working reference only. Alexandru will supply the final clean loop separately. Do not load, optimize, publish, or use the reference export as a poster source.
+The final motion source is now in `assets/repositioning/selected/`. The older video in `assets/repositioning/pending/` remains a superseded working reference and must not be loaded, optimized, published, or used as a poster source.
 
 ## Selected production assets
 
@@ -24,11 +24,11 @@ The video in `assets/repositioning/pending/` is a working reference only. Alexan
 | A04 | `assets/repositioning/selected/a04-connected-experience-material-light.jpeg` | Connected capabilities / physical and digital experience | Use as a restrained still-life interruption. Preserve the material edges and projected light. It may tolerate a tighter 4:5 crop around the center-right group. | `Paper, concrete, fabric, and translucent panels arranged in directional light.` | Selected |
 | A06 | `assets/repositioning/selected/a06-about-alexandru-grayscale.png` | About Alexandru only | This is the real owned grayscale portrait and provides authorship. Do not replace it with any generated person. Preserve the existing portrait focal point unless the redesigned composition requires a separately reviewed crop. | `Alexandru Filip, founder of ALFable.` | Selected and ready; owned |
 
-## Pending motion asset
+## Selected motion source and required derivatives
 
-| ID | File | Intended placement | Technical details | Blocking issue | Required action |
+| ID | Source file | Intended placement | Source details | Status | Required implementation action |
 |---|---|---|---|---|---|
-| A07 | `assets/repositioning/pending/a07-motion-architectural-light-PENDING-CLEAN-EXPORT.mp4` | Optional interstitial or hero alternative | Current reference: 1920 x 1080, H.264, 8 seconds, 24 fps; contains an AAC audio track | Current file is not the final website export | Alexandru will supply `assets/repositioning/selected/a07-motion-architectural-light.mp4`. After it arrives, remove any audio track, create optimized MP4/WebM versions and a poster frame, then test the loop seam and `prefers-reduced-motion` fallback. |
+| A07 | `assets/repositioning/selected/a07-motion-architectural-light.mp4` | Optional interstitial or hero alternative | 1920 x 1080, H.264, 8 seconds, 30 fps; includes a stereo AAC audio stream | Selected source ready for optimization | Preserve this source file. Strip the audio stream completely from every website derivative; do not merely set playback volume to zero. Create an optimized H.264 MP4, an optimized WebM, and a high-quality WebP poster in the implementation's public media directory. Verify seamless looping, `autoplay muted loop playsinline` behavior where motion is used, responsive loading, and a poster/static experience for `prefers-reduced-motion`. |
 
 ## Selection rationale
 
@@ -51,12 +51,12 @@ The generated tailored-man portraits were not selected. Used beside ALFable's ex
 | A03 | `VISUALS/Editorial_black-and-white_photog…_202607171020.jpeg` | 1376 x 768 | `e7d9d74dfdc327ae82b84468ecf20e1e1d1b4cb9a2164cd16dea3e009768c7a9` | Gemini-generated and supplied by Alexandru; commercial-use rights confirmed |
 | A04 | `VISUALS/Editorial_black-and-white_photog…_202607171019.jpeg` | 1376 x 768 | `511b3e3384090496db5bccd725ccc9204c1c5f1b62078fb93bece4946b3e111a` | Gemini-generated and supplied by Alexandru; commercial-use rights confirmed |
 | A06 | `assets/repositioning/selected/a06-about-alexandru-grayscale.png` | 1024 x 1024 | `31d3337260d43505be803f2570c7bc55e65ce108b15690354c5579fdb6bb1141` | Owned real portrait; grayscale derivative supplied by Alexandru |
-| A07 | `VISUALS/Editorial_monochrome_loop_1080p_202607171022 (1).mp4` | 1920 x 1080; 8 seconds | `e74560c4ffdc32a74c20a128ba5031a1c0a8a1eec16c89dfa0df012ae1278b3a` | Working reference only; final clean loop pending from Alexandru |
+| A07 | `assets/repositioning/selected/a07-motion-architectural-light.mp4` | 1920 x 1080; 8 seconds; 30 fps | `1c240d3bd1693d726d4094c41172819df66e8f4dd51bea8fd27124e80a0f8cac` | Final source supplied by Alexandru; source includes audio that must be removed from production derivatives |
 
 ## Publication gates
 
 - Use A01-A04 without public attribution or generator-detail copy.
-- Replace the A07 working reference with Alexandru's final clean export if motion is retained.
+- Use only the selected A07 source if motion is retained. Production derivatives must contain no audio stream and must include a tested poster/reduced-motion fallback.
 - Do not use the source `VISUALS/` folder directly in HTML or CSS.
 - Do not publish alternative generated portraits, rejected experiments, watermarked media, contact sheets, or temporary review outputs.
 - Optimize copies for production only after the final layout establishes the real rendered dimensions and crop requirements.

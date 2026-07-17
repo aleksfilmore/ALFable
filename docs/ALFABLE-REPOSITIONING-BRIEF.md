@@ -639,9 +639,9 @@ Use `docs/ALFABLE-ASSET-MANIFEST.md` as the operational source of truth and use 
 | A04 | `assets/repositioning/selected/a04-connected-experience-material-light.jpeg` | Connected capabilities / physical and digital experience | Preserve the material edges and projected light; a controlled 4:5 crop is permitted. | Selected and ready |
 | A05 | None | None | A fifth editorial still was intentionally omitted because it added repetition without a necessary visual role. | Do not add |
 | A06 | `assets/repositioning/selected/a06-about-alexandru-grayscale.png` | About Alexandru | Use the real grayscale portrait supplied by Alexandru. Do not replace it with a generated person. | Selected and ready |
-| A07 | `assets/repositioning/selected/a07-motion-architectural-light.mp4` | Optional interstitial or hero alternative | Use only the clean, silent final loop supplied by Alexandru. Create responsive fallbacks and a poster after the final file arrives. | Optional; pending user-supplied final loop |
+| A07 | `assets/repositioning/selected/a07-motion-architectural-light.mp4` | Optional interstitial or hero alternative | Use this exact selected source. Preserve it unchanged, strip its AAC audio stream from every website derivative, and create optimized MP4/WebM files plus a poster and reduced-motion fallback. | Selected source ready for optimization |
 
-A01-A04 and A06 are the complete still-image system. A07 may arrive while implementation is in progress. It is optional and must not block the client-ready still-image experience.
+A01-A04 and A06 are the complete still-image system. A07 is supplied and ready for optimization. Motion remains optional in the final composition and must not block or weaken the client-ready still-image experience.
 
 ### Archived exploration reference - do not execute
 
@@ -760,15 +760,16 @@ Do not choose the AI route merely because it scores well on individual compositi
 - video delivery should be tested on mobile and constrained data connections;
 - preload only the actual above-the-fold critical asset.
 
-### Placeholder behavior
+### Motion-source handling
 
-If A07 is not yet supplied, Codex should:
+For A07, Codex should:
 
-- build the final layout using a neutral local development placeholder or the approved source only for private layout testing;
-- preserve the exact production filename and replacement seam documented above;
-- use CSS treatments that will work with the planned photography;
-- do not source or generate alternatives;
-- do not allow placeholders or source files to reach the public site.
+- preserve `assets/repositioning/selected/a07-motion-architectural-light.mp4` as the unchanged selected source;
+- remove the audio stream completely from all production derivatives rather than relying only on muted playback;
+- create size-appropriate H.264 MP4 and WebM derivatives plus a high-quality WebP poster in the implementation's public media directory;
+- verify a clean loop seam, stable text contrast, responsive loading, mobile performance, and `autoplay muted loop playsinline` behavior where motion is retained;
+- use the poster or an equivalent static composition when `prefers-reduced-motion` is active;
+- never publish the superseded reference in `assets/repositioning/pending/`.
 
 No unapproved placeholder, watermarked asset, low-resolution reference, or raw AI generation may appear on the public site.
 
@@ -1079,14 +1080,14 @@ This is the immediate priority.
 - Strengthen Alexandru's agency/corporate/builder narrative.
 - Update metadata, structured data, navigation, and CTAs.
 - Build the final image compositions and responsive crop behavior around A01-A04 and the documented A06 slot. Use the exact selected production files from Section 11 and `docs/ALFABLE-ASSET-MANIFEST.md`.
-- Integrate the selected grayscale A06 portrait. Treat only the optional A07 loop as a replaceable input with a fixed production filename; its pending status must not block the rest of the implementation.
+- Integrate the selected grayscale A06 portrait. Treat A07 as a selected source that still requires production optimization; motion remains optional and must not block the rest of the implementation.
 - Do not publish unapproved placeholders, watermarked references, or raw AI generations.
 
 ### Phase 2: Selected-media integration and polish
 
 - Integrate and optimize the selected A01-A04 editorial stills.
 - Integrate and optimize the selected grayscale A06 portrait.
-- Add A07 only if Alexandru supplies the clean final loop; remove audio, generate optimized MP4/WebM versions, provide a poster, and honor `prefers-reduced-motion`.
+- If motion strengthens the final composition, integrate A07 from the exact selected source. Strip the audio stream completely, generate optimized MP4/WebM derivatives and a WebP poster, verify the loop seam, and honor `prefers-reduced-motion`.
 - Capture or create authentic visuals for existing ALFable work.
 - Refine media-specific crops, focal points, transitions, and responsive art direction. Phase 1 must already have intentional spacing, contrast, and desktop/mobile composition before media is added.
 - Record Alexandru's confirmation of commercial-use rights in the internal asset manifest; do not add public generator or attribution copy.
@@ -1197,7 +1198,6 @@ These items should not block Phase 1 unless the layout depends on them.
 - legally approved client and brand names from Alexandru's prior career;
 - project-specific role descriptions and outcomes;
 - named testimonials and permissions;
-- optional clean A07 video loop using the exact production filename in Section 11;
 - additional original photography or video beyond the selected launch family;
 - additional case studies;
 - whether any existing work should be removed or reordered after the client-ready release.
@@ -1215,7 +1215,7 @@ When implementing this brief, Codex should:
 1. Report the current repository state and any relevant pre-existing changes before editing.
 2. Preserve unrelated user work.
 3. Implement the English source first, then adapt and verify Romanian in the same workstream.
-4. Use the existing `docs/ALFABLE-ASSET-MANIFEST.md` as the asset source of truth. Update it only when A07 is supplied or when production derivatives are created. Do not reopen the wider visual selection.
+4. Use the existing `docs/ALFABLE-ASSET-MANIFEST.md` as the asset source of truth. A07 is supplied; update the manifest when its production derivatives are created. Do not reopen the wider visual selection.
 5. Clearly identify any copy that remains provisional because a legal or factual input is missing.
 6. Test a local production-like preview in desktop and mobile browsers using the required protocol; use the current live site only as a baseline reference until deployment is separately authorized.
 7. Verify the form, language switcher, legal links, cookie behavior, metadata, responsive layout, and reduced-motion behavior.
