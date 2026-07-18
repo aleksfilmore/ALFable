@@ -14,7 +14,7 @@ Following target-audience feedback that the A01–A04 abstract editorials read a
 |---|---|---|---|---|
 | B01 | `assets/repositioning/selected/Alex Filip Hero.jpeg` (1376×768) | Homepage hero | `alex-hero-768.webp`, `alex-hero-1376.webp` | In use |
 | B02 | `assets/repositioning/selected/Alex Filip pointing.jpeg` (1200×896) | Client situations figure | `alex-tiles-768.webp`, `alex-tiles-1200.webp` | In use |
-| B03 | `assets/repositioning/selected/Alex Filip Editorial.jpeg` (896×1200) | One partner / capabilities figure | `alex-samples-640.webp`, `alex-samples-1080.webp` | In use |
+| B03 | `assets/repositioning/selected/Alex Filip Editorial.jpeg` (896×1200) | Removed from homepage 2026-07-18 (One partner section — user judged it one visual too many); retained in the RO deck slide 5 | derivatives deleted | Not on site |
 | B04 | `assets/repositioning/selected/Alex Filip Editorial 2.jpeg` (896×1200) | How ALFable works / approach figure | `alex-desk-640.webp`, `alex-desk-1080.webp` | In use |
 | — | `assets/repositioning/selected/Alex Filip pointing 2.jpeg` | None | None | Not selected: overhead lone-hand composition is close to the imagery the audience feedback flagged |
 
