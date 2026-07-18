@@ -1,12 +1,28 @@
 # ALFable Repositioning Asset Manifest
 
-**Status:** Initial website visual family selected  
-**Date:** 17 July 2026  
+**Status:** Revised visual family selected (personal photo set) — supersedes the A01–A04 editorial family on the homepage  
+**Date:** 18 July 2026 (original selection 17 July 2026)  
 **Production folder:** `assets/repositioning/selected/`  
 **Reference media folder:** `assets/repositioning/pending/`
 **Rights confirmation:** Alexandru confirms commercial-use rights for the Gemini-generated visuals. No public generator attribution or production-detail disclosure is required.
 
-## Implementation instruction
+## Revision — 18 July 2026: personal photo family (B01–B04)
+
+Following target-audience feedback that the A01–A04 abstract editorials read as unsettling ("black magic", "corpse fingers") and too cold, Alexandru supplied a new set of monochrome photographs of himself and directed that they replace the A01–A04 stills on the homepage. A01–A04 remain in `assets/repositioning/selected/` as archive only; do not reuse them on the site without new direction.
+
+| ID | Source file | Placement | Production derivatives (`assets/repositioning/site/`) | Status |
+|---|---|---|---|---|
+| B01 | `assets/repositioning/selected/Alex Filip Hero.jpeg` (1376×768) | Homepage hero | `alex-hero-768.webp`, `alex-hero-1376.webp` | In use |
+| B02 | `assets/repositioning/selected/Alex Filip pointing.jpeg` (1200×896) | Client situations figure | `alex-tiles-768.webp`, `alex-tiles-1200.webp` | In use |
+| B03 | `assets/repositioning/selected/Alex Filip Editorial.jpeg` (896×1200) | One partner / capabilities figure | `alex-samples-640.webp`, `alex-samples-1080.webp` | In use |
+| B04 | `assets/repositioning/selected/Alex Filip Editorial 2.jpeg` (896×1200) | How ALFable works / approach figure | `alex-desk-640.webp`, `alex-desk-1080.webp` | In use |
+| — | `assets/repositioning/selected/Alex Filip pointing 2.jpeg` | None | None | Not selected: overhead lone-hand composition is close to the imagery the audience feedback flagged |
+
+All B-series files were supplied by Alexandru on 18 July 2026 with direction to use them on ALFable.com; they depict Alexandru Filip, so person-alt-text may name him. A06 (real grayscale portrait) remains in use for About. The A07 motion source remains selected-but-optional and unoptimized.
+
+The homepage was also restructured on 18 July 2026 in response to the same feedback: the Selected Work grid was removed in favor of a one-sentence proof strip (`#work`), with the full portfolio moving to the meeting presentations in `presentation/`.
+
+## Implementation instruction (17 July 2026 — superseded where it conflicts with the revision above)
 
 Use only the files in `assets/repositioning/selected/` for the first website implementation. The originals in `VISUALS/` are the exploration set and must not be selected ad hoc during implementation.
 

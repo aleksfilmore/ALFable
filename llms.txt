@@ -24,8 +24,8 @@ Ways to work include a focused foundation or repositioning sprint, an integrated
 Important interpretation notes:
 
 - ALFable is a senior-led studio with trusted collaborators, not a large layered agency.
-- The website's editorial monochrome imagery expresses the studio's point of view and is not presented as client case-study evidence.
-- The Selected Real Work section links to public products and websites created or developed by ALFable.
+- The website's monochrome photography shows Alexandru Filip and the studio's working environment; it is not presented as client case-study evidence.
+- The Selected work strip links to public products and websites created or developed by ALFable; the full portfolio is presented in conversations and meetings.
 - Recommendations are anonymised excerpts from existing LinkedIn recommendations.
 - Contact: alex@alfable.com.
 
@@ -36,9 +36,9 @@ Important interpretation notes:
 
 ## Services and proof
 
+- [One partner, connected capabilities](https://www.alfable.com/#one-partner): Brand strategy, identity, digital products, communication, launch, and growth—delivered by one accountable partner.
 - [Client situations](https://www.alfable.com/#what-we-solve): New ventures, repositioning, and digital-experience challenges ALFable is designed to solve.
-- [Connected capabilities](https://www.alfable.com/#capabilities): Brand strategy, identity, digital products, communication, launch, and growth services.
-- [Selected real work](https://www.alfable.com/#work): Public ALFable products and digital presences.
+- [Selected work](https://www.alfable.com/#work): Public ALFable products and digital presences.
 - [How ALFable works](https://www.alfable.com/#approach): Senior leadership and trusted specialist collaborator model.
 - [About Alexandru Filip](https://www.alfable.com/#about): Agency, corporate, brand, communications, and digital experience behind ALFable.
 - [Start a conversation](https://www.alfable.com/#contact): Project enquiry form and direct email contact.
